@@ -1,0 +1,14 @@
+Feature: POST Account Generate Token
+  As a admin
+  I want to generate user account by token
+  So I can verify user account
+
+  Scenario: Generate user account with valid token
+    Given I set url and valid token
+    When I request with valid token
+    Then I get status code 200
+
+    Scenario: Generate user account with invalid token
+      Given I set url and invalid token
+      When I request with invalid token
+      Then I get status code 404

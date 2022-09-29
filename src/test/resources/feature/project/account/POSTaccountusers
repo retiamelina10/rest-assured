@@ -1,0 +1,14 @@
+Feature: POST Account User
+  As a Admin
+  I want to create user account authorize
+  So I can add new user
+
+  Scenario: POST new user account with valid data
+    Given I set url and valid data
+    When I request with valid data
+    Then I get status code 200
+
+  Scenario:POST new user account with valid data
+    Given I set url and invalid data
+    When I request with invalid data
+    Then I get status code 404

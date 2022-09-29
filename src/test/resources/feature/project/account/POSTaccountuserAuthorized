@@ -1,0 +1,14 @@
+Feature: POST Account Authorized
+  As a admin
+  I want to take user account
+  So I can update some user account
+
+  Scenario: Update user account with valid data to update new book list
+    Given I set url and valid user account
+    When I request with valid user account and update user new book list
+    Then I get status code 200
+
+    Scenario: Update user account with valid data to update book title
+      Given I set url and valid user data
+      When I request with valid user data and update book title
+      Then I obtain status code 200

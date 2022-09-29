@@ -1,0 +1,9 @@
+Feature: DELETE Bookstore Books
+  As a admin
+  I want to delete books
+  So I can manage the book store
+
+  Scenario: Delete book with collection ISBN
+    Given I set url and Id collection isbn
+    When I request with url and id collection
+    Then I can get status code 200

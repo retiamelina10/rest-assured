@@ -1,0 +1,9 @@
+Feature: GET All Book in Bookstore
+  As a user
+  I want to get books in bookstore
+  So I can find book what i want
+
+  Scenario: Find books what i was looking for
+    Given I set url
+    When I request with url
+    Then I can get some books in bookstore

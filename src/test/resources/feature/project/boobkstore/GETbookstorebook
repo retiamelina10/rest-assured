@@ -1,0 +1,14 @@
+Feature: GET Bookstore Book
+  As a User
+  I want to check book in bookstore
+  So I can verify book what i want
+
+  Scenario: Find books with ISBN
+    Given I set url and book ISBN
+    When I request with url and valid ISBN
+    Then I can verify the book
+
+    Scenario: FInd book with invalid ISBN
+      Given I set url and invalid book ISBN
+      When I request with url and invalid ISBN
+      Then I get status code 401

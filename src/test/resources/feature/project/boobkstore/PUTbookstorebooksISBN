@@ -1,0 +1,9 @@
+Feature: PUT Book with ISBN
+  As a Admin
+  I want to update books in bookstore
+  So I can manage list book in bookstore
+
+  Scenario: Update books with ISBN
+    Given I set url dan book ISBN
+    When I request with url and ISBN
+    Then I will get status code 201

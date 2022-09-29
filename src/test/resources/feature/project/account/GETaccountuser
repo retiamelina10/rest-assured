@@ -1,0 +1,17 @@
+Feature: GET Account User
+  As a admin
+  I want to get the user account
+  so I can manage user account
+
+  Scenario: GET Account User with valid Id
+    Given I set url and valid user ID to get user account
+    When I request with valid user ID
+    Then I get status code 200 OK
+    And I can see the detail response
+
+    Scenario: GET user account with integer user ID
+      Given I set url and combinations of numbers
+      When I request with invalid USerID
+      Then I get status code 401 Unauthorized
+      And I get message user not authorize
+

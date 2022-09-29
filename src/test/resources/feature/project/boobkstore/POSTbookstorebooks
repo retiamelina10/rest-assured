@@ -1,0 +1,9 @@
+Feature: POST Bookstore Books
+  As a admin
+  I  want to create some book on user account
+  So I can manage user account
+
+  Scenario: Create with valid user ID and ISBN
+    Given I set valid user ID and ISBN
+    When I request withvalid user ID and ISBN
+    Then I get status code 201
